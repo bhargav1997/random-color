@@ -11,12 +11,35 @@
 <body>
     <div class="container">
         <h1>Random Color Generator</h1>
-        <h2 id="color">rgb(238, 238, 238)</h2>
-        <h2 id="hex">#eeeeee</h2>
+        <h2 id="color-rgba">rgb(238, 238, 238)</h2>
+        <h2 id="color-hex">#eeeeee</h2>
         <button id="btn" class="btn-container">Genrate Random Color</button>
-        <button id="copy" class="btn-container">Copy</button>
-        <button id="clear" class="btn-container">Clear</button>
-        
+
+        <div id="color-btn-container">
+            <select name="color" id="color" class="btn-container">
+                <option value="rgba">RGBA</option>
+                <option value="hex">HEX</option>
+            </select>
+
+            <button id="copy" class="btn-container">Copy</button>
+            <button id="clear" class="btn-container">Clear</button>
+        </div>
+
+      
+        <div class="contrast-container">
+            <h2 id="color-contrast-title">Check Color Contrast <br> Between Text and Background</h2>
+            <div>
+                <label for="text-color">Text Color:</label>
+                <input type="color" id="text-color" value="#000000">
+            </div>
+            <div>
+                <label for="bg-color">Background Color:</label>
+                <input type="color" id="bg-color" value="#ffffff">
+            </div>
+            <button id="contrast-btn" class="btn-container">Check Contrast</button>
+            <p id="result-container"></p>
+        </div>
+
     </div>
     <script src="script.js"></script>
 </body>
