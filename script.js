@@ -7,13 +7,16 @@ window.onload = () => {
     const copy = document.getElementById('copy');
     const clear = document.getElementById('clear');
     const contrastBtn = document.getElementById('contrast-btn');
+    const noteEditor = document.getElementById('note-editor');
 
     copy.addEventListener('click', () => {
         const colorCode = color.value;
         if (colorCode === "rgba") {
             navigator.clipboard.writeText(rgbaColor.innerHTML);
+            noteEditor.innerHTML+= "<br>"+rgbaColor.innerHTML;
         } else {
             navigator.clipboard.writeText(hexColor.innerHTML);
+            noteEditor.innerHTML+= "<br>"+hexColor.innerHTML;
         }   
         copy.innerHTML = "Copied";
         setTimeout(() => {

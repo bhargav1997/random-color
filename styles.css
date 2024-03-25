@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-    text-transform: uppercase;
+   text-transform: uppercase;
 }
 
 #color-rgba {
@@ -52,31 +52,52 @@ h1 {
 }
 
 .contrast-container {
-    text-align: center;
-    margin: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1em;
-  }
-  
-  #color-contrast-title {
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+   text-align: center;
+   margin: 2em;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   row-gap: 1em;
+}
 
-  label {
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  #result-container {
-    font-weight: bold;
-    font-size: 30px;
-    padding: 0.3em 2em;
-    background: black;
-    border-radius: 0.5em;
-  }
+#color-contrast-title {
+   font-size: 30px;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+label {
+   margin-right: 10px;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+#result-container {
+   font-weight: bold;
+   font-size: 30px;
+   padding: 0.3em 2em;
+   background: black;
+   border-radius: 0.5em;
+}
+
+.note-row {
+   background: #ffffff;
+   margin: 10px;
+   scroll-behavior: smooth;
+}
+
+.note-editor {
+   height: 250px;
+   width: 250px;
+   resize: none;
+   border: none;
+   outline: none;
+   padding: 10px;
+   border-radius: 10px;
+   overflow: auto;
+}
+
+.note-editor::-webkit-scrollbar {
+   display: none;
+}
