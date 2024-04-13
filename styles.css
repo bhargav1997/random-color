@@ -9,13 +9,31 @@ body {
 }
 
 .container {
+   display: grid;
+   grid-auto-columns: minmax(0, 1fr);
+   grid-auto-flow: column;
+   padding: 1em;
+   margin: auto;
    width: 100%;
-   /* height: 100vh; */
-   margin: 1em auto;
+   gap: 1em;
+   height: 100vh;
+}
+
+.random-color-container {
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
+   row-gap: 1em;
+   text-align: center;
+}
+
+#box-color-container {
+   height: 300px;
+   width: 100%;
+   border: 1px solid black;
+   background-color: #eeeeee;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #color-btn-container {
@@ -31,14 +49,10 @@ h1 {
    text-transform: uppercase;
 }
 
-#color-rgba {
-   font-size: 30px;
+.colors {
+   font-size: 20px;
    margin: 0.5em 0;
-}
-
-#color-hex {
-   font-size: 30px;
-   margin: 0 0 0.5em 0;
+   font-weight: 2 00;
 }
 
 .btn-container {
@@ -53,19 +67,51 @@ h1 {
 }
 
 .contrast-container {
-   text-align: center;
-   margin: 2em;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
    row-gap: 1em;
+   text-align: center;
 }
 
 #color-contrast-title {
    font-size: 30px;
    font-weight: bold;
    text-transform: uppercase;
+}
+
+.color-contrast-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   column-gap: 1em;
+}
+
+#contrast-color-box-container {
+   height: 300px;
+   width: 100%;
+   border: 1px solid black;
+   background-color: ffffff;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#contrast-color-box-container h2 {
+   text-align: center;
+   font-size: 50px;
+   color: #000;
+}
+
+#color-type-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   column-gap: 1em;
 }
 
 label {
@@ -76,6 +122,7 @@ label {
 
 #result-container {
    font-weight: bold;
+   display: none;
    font-size: 30px;
    padding: 0.3em 2em;
    background: black;
@@ -102,3 +149,4 @@ label {
 .note-editor::-webkit-scrollbar {
    display: none;
 }
+

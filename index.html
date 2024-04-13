@@ -10,37 +10,45 @@
 
 <body>
     <div class="container">
-        <h1>Random Color Generator</h1>
-        <h2 id="color-rgba">rgb(238, 238, 238)</h2>
-        <h2 id="color-hex">#eeeeee</h2>
-        <button id="btn" class="btn-container">Genrate Random Color</button>
-
-        <div id="color-btn-container">
-            <select name="color" id="color" class="btn-container">
-                <option value="rgba">RGBA</option>
-                <option value="hex">HEX</option>
-            </select>
-
-            <button id="copy" class="btn-container">Copy</button>
-            <button id="clear" class="btn-container">Clear</button>
-        </div>
-
-
-        <div class="note-row">
-            <div contenteditable="true" class="note-editor" id="note-editor">
-               <span style="font-weight: bold;" contenteditable="false">#Your Colors Will Appear Here</span> 
+        <div class="random-color-container">
+            <h1>Random Color Generator</h1>
+            <div id="box-color-container">   
             </div>
+            <div id="color-type-container">
+                <p class="colors"> RGBA: <span id="rgba-random-color">rgb(238, 238, 238)</span></p>
+                <p class="colors"> HEX: <span id="hex-random-color">#eeeeee</span></p>
+            </div>
+            <div>
+                <input type="range" min="0" max="100" value="100" class="slider" id="opacitySlider">
+            </div>
+            <button id="btn" class="btn-container">Genrate Random Color</button>
+    
+            <!-- <div id="color-btn-container">
+                <select name="color" id="color" class="btn-container">
+                    <option value="rgba">RGBA</option>
+                    <option value="hex">HEX</option>
+                </select>
+    
+                <button id="copy" class="btn-container">Copy</button>
+                <button id="clear" class="btn-container">Clear</button>
+            </div> -->
         </div>
         <div class="contrast-container">
-            <h2 id="color-contrast-title">Check Color Contrast <br> Between Text and Background</h2>
-            <div>
-                <label for="text-color">Text Color:</label>
-                <input type="color" id="text-color" value="#000000">
+            <h2 id="color-contrast-title">Check Color Contrast</h2>
+            <div id="contrast-color-box-container">   
+                <h2>Hello World</h2>
             </div>
-            <div>
-                <label for="bg-color">Background Color:</label>
-                <input type="color" id="bg-color" value="#ffffff">
+            <div class="color-contrast-container">
+                <div>
+                    <label for="text-color">Text Color:</label>
+                    <input type="color" id="text-color" value="#000000">
+                </div>
+                <div>
+                    <label for="bg-color">Background Color:</label>
+                    <input type="color" id="bg-color" value="#ffffff">
+                </div>
             </div>
+
             <button id="contrast-btn" class="btn-container">Check Contrast</button>
             <p id="result-container"></p>
         </div>
